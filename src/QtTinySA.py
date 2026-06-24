@@ -33,7 +33,7 @@ from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile, Slot
 from PySide6.QtWidgets import QMessageBox, QDataWidgetMapper, QFileDialog, QInputDialog, QLineEdit, QTableWidgetItem
 from PySide6.QtSql import QSqlDatabase, QSqlRelation, QSqlRelationalTableModel, QSqlRelationalDelegate, QSqlQuery
-from PySide6.QtGui import QPixmap, QIcon
+from PySide6.QtGui import QPixmap, QIcon, QFontDatabase
 
 import queue
 import shutil
@@ -1750,6 +1750,25 @@ def app_dir(filename):
             return bundled_file
 
 
+def load_application_fonts():
+    # Path to the bundled assets folder
+    assets_dir = resource_path("assets")
+    if not os.path.exists(assets_dir):
+        print(f"Error: Assets directory not found at {assets_dir}")
+        return
+    for file in os.listdir(assets_dir):
+        if file.lower().endswith(".ttf"):
+            font_path = os.path.join(assets_dir, file)
+            font_id = QFontDatabase.addApplicationFont(font_path)
+            
+            if font_id == -1:
+                print(f"Failed to load font file: {file}")
+            else:
+                # Optional: verification print to stdout
+                families = QFontDatabase.applicationFontFamilies(font_id)
+                print(f"Successfully loaded {file} into family: {families}")
+
+
 def connect(dbFile, con, target):
     db = QSqlDatabase.addDatabase('QSQLITE', connectionName=con)
     dbPath = getPath(dbFile)
@@ -2106,6 +2125,10 @@ loader = CustomLoader()
 app = QtWidgets.QApplication([])
 app.setApplicationName('QtTinySA')
 app.setApplicationVersion(' v1.2.5')
+
+if sys.platform == 'darwin':
+    # load fonts from application bundle for macOS
+    load_application_fonts()
 
 QtTSA = loader.load(resource_path("spectrum.ui"), None)
 presetFreqs = CustomDialogue(app_dir('bands.ui'))

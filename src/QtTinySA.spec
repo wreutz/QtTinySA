@@ -4,10 +4,21 @@ import sys
 
 block_cipher = None
 
+# Base data files needed on all platforms
+datas_list = [
+    ('QtTSAprefs.db', '.'),
+    ('*.ui', '.'),
+    ('10_baseline.txt', '.'),
+    ('1152_baseline.txt', '.')
+]
+# add DejaVu fonts only on macOS
+if sys.platform == 'darwin':
+    datas_list.append(('assets/*', 'assets'))
+
 common = {
     'pathex': [],
     'binaries': [],
-    'datas': [('QtTSAprefs.db', '.'), ('*.ui', '.'), ('10_baseline.txt', '.'), ('1152_baseline.txt', '.')],
+    'datas': datas_list,
     'hiddenimports': [],
     'hookspath': [],
     'hooksconfig': {},

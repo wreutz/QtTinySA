@@ -156,6 +156,7 @@
        </property>
        <property name="font">
         <font>
+         <family>DejaVu Sans</family>
          <pointsize>9</pointsize>
         </font>
        </property>
@@ -222,6 +223,7 @@
       <widget class="QCheckBox" name="clockwise">
        <property name="font">
         <font>
+         <family>DejaVu Sans</family>
          <pointsize>12</pointsize>
         </font>
        </property>
@@ -249,6 +251,7 @@
        </property>
        <property name="font">
         <font>
+         <family>DejaVu Sans</family>
          <pointsize>9</pointsize>
         </font>
        </property>

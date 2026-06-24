@@ -36,6 +36,7 @@
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
+         <family>DejaVu Sans</family>
          <pointsize>7</pointsize>
          <weight>75</weight>
          <bold>true</bold>
@@ -128,6 +129,7 @@
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
+         <family>DejaVu Sans</family>
          <pointsize>7</pointsize>
          <weight>75</weight>
          <bold>true</bold>
@@ -212,6 +214,7 @@
        </property>
        <property name="font">
         <font>
+         <family>DejaVu Sans</family>
          <pointsize>4</pointsize>
         </font>
        </property>

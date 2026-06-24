@@ -19,6 +19,7 @@
   </property>
   <property name="font">
    <font>
+    <family>DejaVu Sans</family>
     <pointsize>10</pointsize>
    </font>
   </property>
@@ -378,7 +379,7 @@ and Colours</string>
             <property name="font">
              <font>
               <family>DejaVu Sans</family>
-              <pointsize>8</pointsize>
+              <pointsize>11</pointsize>
               <italic>false</italic>
               <bold>true</bold>
              </font>
