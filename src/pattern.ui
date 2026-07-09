@@ -289,7 +289,7 @@
      <item row="1" column="9">
       <spacer name="horizontalSpacer">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -314,7 +314,7 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="processing"/>
   <buttongroup name="autoMan"/>
+  <buttongroup name="processing"/>
  </buttongroups>
 </ui>

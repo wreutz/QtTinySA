@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>781</width>
+     <width>794</width>
      <height>571</height>
     </rect>
    </property>
@@ -28,7 +28,6 @@
       <property name="font">
        <font>
         <pointsize>7</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -58,7 +57,6 @@
       <property name="font">
        <font>
         <pointsize>7</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -115,13 +113,13 @@
        <bool>false</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>
       <property name="buttonSymbols">
-       <enum>QAbstractSpinBox::NoButtons</enum>
+       <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
       </property>
       <property name="suffix">
        <string> listed</string>

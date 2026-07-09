@@ -2105,7 +2105,7 @@ tinySA = Analyser()
 loader = CustomLoader()
 app = QtWidgets.QApplication([])
 app.setApplicationName('QtTinySA')
-app.setApplicationVersion(' v1.2.5')
+app.setApplicationVersion(' v1.2.6')
 
 QtTSA = loader.load(resource_path("spectrum.ui"), None)
 presetFreqs = CustomDialogue(app_dir('bands.ui'))
