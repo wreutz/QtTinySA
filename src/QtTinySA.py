@@ -2124,7 +2124,7 @@ tinySA = Analyser()
 loader = CustomLoader()
 app = QtWidgets.QApplication([])
 app.setApplicationName('QtTinySA')
-app.setApplicationVersion(' v1.2.5')
+app.setApplicationVersion(' v1.2.6')
 
 if sys.platform == 'darwin':
     # load fonts from application bundle for macOS
